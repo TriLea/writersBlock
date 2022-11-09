@@ -6,11 +6,14 @@ fetch('https://od-api.oxforddictionaries.com/api/v2')
 	     console.log(data);
 	  })
 	//need to add authetication data - notes below 
-	
+const options = {
+	method: 'GET",
+	headers: {
+		'X-RapidAPI-Key':'771dd832837d5b5806029fd8d019e0d4',
+		'X-RapidAPI-Host':'od-api.oxforddictionaries.com/api/v2'
+};
 
-	//API Base URL
-	//https://od-api.oxforddictionaries.com/api/v2
-	//Consistent part of API requests.
+	
 	
 
 	//Application ID
@@ -23,21 +26,26 @@ fetch('https://od-api.oxforddictionaries.com/api/v2')
 	//These are application keys used to authenticate requests.
 	
 
-	//At most 5 keys are allowed. //
-	
+	//At most 5 keys are allowed. /
+	 
 
-	
 
-	fetch('https://www.stands4.com/services/v2/syno.php') 
-	  .then(function(response) {
-	    return response.json();
-	  })
-	  .then(function(data)  {
-	    console.log(data);
-	  });
-	  //waiting for credentials - coming in email. Applied again today via email as what I did last night hasn't been responded to from the site
 
-      
-	  //note parameters in search
-      //https://www.synonyms.com/synonyms_api.php - this page notes parameters for search
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '59ae5d1c5amsh851b368a75b1c3dp1c3c6bjsnfffa6369ea8d',
+		'X-RapidAPI-Host': 'twinword-word-graph-dictionary.p.rapidapi.com'
+	}
+};
+
+fetch('https://twinword-word-graph-dictionary.p.rapidapi.com/association/?entry=mask', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
+
+
+
+
+
 Footer
