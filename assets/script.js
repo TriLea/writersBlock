@@ -2,8 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.parallax');
     var instances = M.Parallax.init(elems, options);
-});
-*/
+}); */
 
 function onSubmit(event) {
     event.preventDefault();
@@ -14,15 +13,20 @@ function onSubmit(event) {
 
 document.getElementById("favorites-button").addEventListener("click", currentWordFav);
 
-function currentWordFav() {
-    var input = document.getElementById("input");
-    localStorage.setItem("favorites", input.value);
-    console.log(input.value + " has been favorited!");
+async function currentWordFav() {
+    var input = document.getElementById("input").value;
+    var favorites = [input];
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+    var append = document.createElement('p');
+    append.innerHTML = favorites
+    document.body.appendChild(append);
+    // const answers = await fetch('https://www.stands4.com/services/v2/syno.php?uid&tokenid=tk324324&word=${input}');
+    // console.log(answers);
+    
 }
 
-for (var i = 0, local = localStorage.length; i < local; ++i) {
-	var elements = document.createElement("p");
-	elements.textContent = localStorage.getItem(localStorage.key(i.value));
-	console.log("Displaying word: " + i);
-	output.appendChild(elements);
-}
+
+// var favoritesList = JSON.parse(localStorage.getItem(favorites));
+
+
+
