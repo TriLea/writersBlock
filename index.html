@@ -1,20 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Writer's Block</title>
+    <link rel="stylesheet" href="./assets/styleheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css" integrity="sha512-t38vG/f94E72wz6pCsuuhcOPJlHKwPy+PY+n1+tJFzdte3hsIgYE7iEpgg/StngunGszVMrRfvwZinrza0vMTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
+
   <body>
-	<script src="index.js"></script>
+    <header id="header">
+      <div>
+        <h1 class="center">Synonym Finder</h1>
+        <h5 class="center">Gain confidence when you speak and write</h2>
+      </div>
+    </header>
 
-    <div>
-        <header>
-            <h1></h1>
-        </header>
-    </div>
-
+    <main>
+      <div>
+        <section class="container align-center justify-center">
+          <h4 class="center">What Are Synonyms?</h3>
+          <div class="center">
+            <p>
+              A synonym is a word that has the same or nearly the same meaning as another word. 
+              Synonyms are used in different contexts and can have slightly different connotations.
+              The word synonymy comes from the Greek meaning "same name."
+            </p>
+          </div>
+        </section>
+        <section class="container align-center justify-center">
+          <h4 class="center">Why Are Synonyms Useful?</h3>
+          <div class="center">
+            <p>
+            Synonyms can be useful in many ways, such as expanding your verbal and written vocabulary.
+            If your writing is often uninteresting and monotonous, finding synonyms can enchance the quality
+            of your writing. If you often sound repetitive, synonyms can make you sound more intelligent and can 
+            help you express yourself better by being more specific which furhter improves your communication skills.
+          </p>
+          </div>
+        </section>
+        <section>
+          <div id="synonym-form">
+            <input type="text" class="form-input" name="find-synonyms" placeholder="Enter Word" />
+          </div>
+          <div class="center">
+            <div class="card-synonym-text">
+              Click the button to find synonyms:
+             </div>
+          </div>
+          <div class="center">
+            <button id="synonym-button" class="card-panel pink lighten-2">Find Synonyms</button>
+          </div>
+        </section>
+        <section>
+          <div class="center">
+            <div class="card-favorites-text">
+              Click to add to favorites:
+            </div>
+          </div>
+          <div class="center">
+            <button id="favorites-button" class="card-panel pink lighten-2">Add to Favorites</button>
+          </div>
+        </section>
+      </div>
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js" integrity="sha512-m2PhLxj2N91eYrIGU2cmIu2d0SkaE4A14bCjVb9zykvp6WtsdriFCiXQ/8Hdj0kssUB/Nz0dMBcoLsJkSCto0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/script.js"></script>
   </body>
 </html>
