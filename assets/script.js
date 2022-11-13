@@ -31,12 +31,9 @@ async function currentWordFav() {
 
 
 
-// const formInput = document.getElementById("form-input");
-// formInput.addEventListener('keyup', (event))
-var formSubmit = document.createElement("form");
-formSubmit.setAttribute("onSubmit", "onSubmit(event);")
-
 function onSubmit(event) {
     event.preventDefault();
     console.log("Form has been submitted");
+    const input = document.getElementById("input");
+    console.log(input.value);
 }
