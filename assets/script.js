@@ -37,3 +37,29 @@ function onSubmit(event) {
     const input = document.getElementById("input");
     console.log(input.value);
 }
+
+document.getElementById("favorites-button").addEventListener("click", currentWordFav);
+
+function currentWordFav() {
+    var input = document.getElementById("input");
+    localStorage.setItem("favorites", input.value);
+    console.log(input.value + " has been favorited!");
+}
+
+
+
+
+
+
+//     if (localStorage.getItem("favorites")){
+//         var storage = JSON.parse(localStorage["favorites"]);
+//         if (storage.indexOf(input.value) == -1) {
+//             storage.push(input.value);
+//             localStorage.setItem("favorites", JSON.stringify(storage));
+//             console.log("Word has been favorited");
+//         }
+//         else {
+//             console.log("Word already favorited");
+//         }
+//     }
+// }
