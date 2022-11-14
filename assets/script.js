@@ -46,20 +46,9 @@ function currentWordFav() {
     console.log(input.value + " has been favorited!");
 }
 
-
-
-
-
-
-//     if (localStorage.getItem("favorites")){
-//         var storage = JSON.parse(localStorage["favorites"]);
-//         if (storage.indexOf(input.value) == -1) {
-//             storage.push(input.value);
-//             localStorage.setItem("favorites", JSON.stringify(storage));
-//             console.log("Word has been favorited");
-//         }
-//         else {
-//             console.log("Word already favorited");
-//         }
-//     }
-// }
+for (var i = 0, local = localStorage.length; i < local; ++i) {
+	var elements = document.createElement("p");
+	elements.textContent = localStorage.getItem(localStorage.key(i.value));
+	console.log("Displaying word: " + i);
+	output.appendChild(elements);
+}
