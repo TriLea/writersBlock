@@ -52,16 +52,16 @@
           </div>
         </section>
         <section>
-          <div id="synonym-form">
-            <input type="text" class="form-input" name="find-synonyms" placeholder="Enter Word" />
-          </div>
+          <div id="synonym-form" class="center">
+              <form id="formSubmit" onsubmit="onSubmit(event)">
+                <input type="text" class="form-input" id="input" name="find-synonyms" placeholder="Enter Word" />
+                  <button id="synonym-button" class="btn-small indigo accent-2 z-depth 10">Find Synonyms</button>
+              </form>
+            </div>
           <div class="center">
             <div class="card-synonym-text">
               Click the button to find synonyms:
              </div>
-          </div>
-          <div class="center">
-            <button id="synonym-button" class="btn-small indigo accent-2 z-depth 10">Find Synonyms</button>
           </div>
         </section>
         <section>
