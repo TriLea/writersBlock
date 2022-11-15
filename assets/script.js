@@ -21,4 +21,3 @@ function currentWordFav() {
 
 var favoritesList = JSON.parse(localStorage.getItem(favorites));
 
-
