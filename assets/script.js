@@ -1,7 +1,8 @@
+/*
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.parallax');
     var instances = M.Parallax.init(elems, options);
-});
+}); */
 
 function onSubmit(event) {
     event.preventDefault();
@@ -12,10 +13,11 @@ function onSubmit(event) {
 
 document.getElementById("favorites-button").addEventListener("click", currentWordFav);
 
-function currentWordFav() {
+async function currentWordFav() {
     var input = document.getElementById("input").value;
     var favorites = [input];
     localStorage.setItem("favorites", JSON.stringify(favorites));
+    const answers = await fetch('')
 
 }
 
