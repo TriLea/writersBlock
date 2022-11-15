@@ -17,9 +17,16 @@ async function currentWordFav() {
     var input = document.getElementById("input").value;
     var favorites = [input];
     localStorage.setItem("favorites", JSON.stringify(favorites));
-    const answers = await fetch('')
-
+    var append = document.createElement('p');
+    append.innerHTML = favorites
+    document.body.appendChild(append);
+    // const answers = await fetch('https://www.stands4.com/services/v2/syno.php?uid&tokenid=tk324324&word=${input}');
+    // console.log(answers);
+    
 }
 
-var favoritesList = JSON.parse(localStorage.getItem(favorites));
+
+// var favoritesList = JSON.parse(localStorage.getItem(favorites));
+
+
 
