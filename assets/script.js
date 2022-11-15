@@ -13,14 +13,12 @@ function onSubmit(event) {
 document.getElementById("favorites-button").addEventListener("click", currentWordFav);
 
 function currentWordFav() {
-    var input = document.getElementById("input");
-    localStorage.setItem("favorites", input.value);
-    console.log(input.value + " has been favorited!");
+    var input = document.getElementById("input").value;
+    var favorites = [input];
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+
 }
 
-for (var i = 0, local = localStorage.length; i < local; ++i) {
-	var elements = document.createElement("p");
-	elements.textContent = localStorage.getItem(localStorage.key(i.value));
-	console.log("Displaying word: " + i);
-	output.appendChild(elements);
-}
+var favoritesList = JSON.parse(localStorage.getItem(favorites));
+
+
